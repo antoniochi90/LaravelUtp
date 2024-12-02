@@ -11,6 +11,7 @@
 
     <!-- Tabla -->
     <table class="table costum-table table-dark">
+        <title>Crud de coches</title>
         <thead>
             <tr>
                 <th>id</th>
