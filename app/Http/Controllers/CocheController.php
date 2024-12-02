@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Coche;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 use Illuminate\Support\Facades\Validator;
 
@@ -170,5 +171,13 @@ class CocheController extends Controller
         return to_route('dashboard');
     }
 
-        
+    public function exportPdf()
+    {
+        $coches = Coche::all(); // O aplica filtros si es necesario
+        $pdf = Pdf::loadView('components.coches', compact('coches'));
+
+        // Descarga el archivo PDF
+        return $pdf->download('listado coches.pdf');
+    }
+
 }
