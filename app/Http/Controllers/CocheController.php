@@ -173,6 +173,7 @@ class CocheController extends Controller
 
     public function exportPdf()
     {
+        set_time_limit(300); 
         $coches = Coche::all(); // O aplica filtros si es necesario
         $pdf = Pdf::loadView('components.coches', compact('coches'));
 

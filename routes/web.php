@@ -14,6 +14,7 @@ Route::get('/coche/update/{id}', [CocheController::class, 'viewUpdate'])->name('
 Route::put('/coche/{id}', [CocheController::class, 'update'])->name('coche.update');
 Route::delete('/coche/{id}', [CocheController::class, 'destroy'])->name('coche.destroy');
 Route::get('/allcoches', [CocheController::class, 'getall']);
+Route::get('/coches/pdf', [CocheController::class, 'exportPdf'])->name('coches.pdf');
 
 
 Route::middleware([

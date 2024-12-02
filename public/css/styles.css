@@ -1,20 +1,21 @@
-.custom-table {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-.custom-table th, .custom-table td {
-    padding: 10px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 50px;
+    padding: 20px 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: center;
-    vertical-align: middle;
+}
+th {
+    background-color: #f4f4f4;
 }
 
-.custom-table img {
-    object-fit: cover;
-    border-radius: 4px;
-    width: 50px;
-    height: 50px;
+.imagen{
+    width: 190px;
 }
 
 .botonAgregar{
@@ -25,12 +26,25 @@
     background-color: green;
     padding: 10px 10px;
     text-align: center;
+    border-radius: 15px;
 }
 
 .boton2{
     background-color: orange;
+    border-radius: 10px;
+    padding: 10px 10px;
+    size: 16px;
 }
 
 .boton3{
     background-color: red;
+    border-radius: 10px;
+    padding: 10px 10px;
+    size: 16px;
+}
+
+.contenedorBotones{
+    text-align: center;
+    padding: 8px;
+    justify-content: space-between;
 }

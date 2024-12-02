@@ -1,10 +1,17 @@
 @props(['coches'])
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<br>
+<div class="contenedorBotones">
 <div class="botonagregar"><a href="{{ route('coches.create') }}" class="boton">agregar</a></div>
+<br>
+<div class="PdfDescargar"><a href="{{ route('coches.pdf') }}" class="boton">Descargar pdf</a></div>
+</div>
+
+<br>
 
     <!-- Tabla -->
-    <table class="table costum-table" >
-        <thead >
+    <table class="table costum-table table-dark">
+        <thead>
             <tr>
                 <th>id</th>
                 <th>marca</th>
@@ -22,7 +29,7 @@
                     <td>{{ $coche->marca }}</td>
                     <td>${{ number_format($coche->precio, 2) }}</td>
                     <td>
-                        <img src="{{ asset($coche->imagen)}}" alt="">
+                        <img class="imagen" src="{{ asset($coche->imagen)}}" alt="">
                     </td>
                     <td>
                         <!-- Botones de acción -->
